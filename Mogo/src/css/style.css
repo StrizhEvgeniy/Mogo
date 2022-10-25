@@ -385,6 +385,8 @@ h1,h2,h3,h4,h5,h6
     left: 50%;
     bottom: -40px;
 
+    white-space: nowrap;
+
     color: #333;
     text-transform: uppercase;
     font-weight: 700;
@@ -618,6 +620,12 @@ h1,h2,h3,h4,h5,h6
     background-color: #f8f8f8;
 }
 
+.section__comments__square {
+    padding: 150px 0;
+
+    position: relative;
+}
+
 .comment__icon {
     font-size: 70px;
 
@@ -630,6 +638,12 @@ h1,h2,h3,h4,h5,h6
 
     position: absolute;
     left: 110px;
+}
+
+.comment__icon__square {
+    position: absolute;
+    left: 80px;
+    top: -30px;
 }
 
 .comment__text{
@@ -774,18 +788,130 @@ h1,h2,h3,h4,h5,h6
     opacity: .1;
 }
 
+.work__icon {
+    font-size: 24px;
+    color: #fff;
+
+    opacity: 0;
+
+    position: absolute;
+    left: 50%;
+    top: 35%;
+
+    transition: .2s linear;
+
+    transform: translate3d(-50%,-50%,0);
+}
+
 .work__title {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+
+    opacity: 0;
+
     position: absolute;
     left: 50%;
     top: 45%;
+
+    transition: .2s linear;
 
     transform: translate3d(-50%,-50%,0);
 }
 
 .work__text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1,5;
+    color: #fff;
+
+    opacity: 0;
+
     position: absolute;
     left: 50%;
     top: 55%;
 
+    transition: .2s linear;
+
     transform: translate3d(-50%,-50%,0);
+}
+
+.work__item:hover .work__icon,
+.work__item:hover .work__title,
+.work__item:hover .work__text {
+    opacity: 1;
+}
+
+
+/* WPS */
+.section__wps {
+    background: url(
+        ../img/wps/background.jpg)
+        center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.wps__line {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 80px;
+}
+
+.wps__item {
+    position: relative;
+    padding-right: 40px;
+}
+
+.wps__img {
+    position: absolute;
+    left: 40px;
+}
+
+.wps__name {
+    padding-left: 180px;
+    margin-bottom: 10px;
+
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.wps__job__pos {
+    padding-left: 180px;
+    margin-bottom: 45px;
+
+    position: relative;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1,5;
+    color: #999;
+}
+
+.wps__job__pos::after {
+    content:"";
+    display: block;
+
+    width: 60px;
+    height: 3px;
+
+    background-color: #f38181;
+
+    position: absolute;
+    bottom: -20px;
+}
+
+.wps__text {
+    padding-left: 180px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 1,5;
+    color: #999;
 }
